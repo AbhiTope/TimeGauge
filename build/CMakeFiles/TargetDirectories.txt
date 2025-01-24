@@ -1,0 +1,3 @@
+/home/admin/small_proj/year_laps_in_percent/build/CMakeFiles/YearGauge.dir
+/home/admin/small_proj/year_laps_in_percent/build/CMakeFiles/edit_cache.dir
+/home/admin/small_proj/year_laps_in_percent/build/CMakeFiles/rebuild_cache.dir
