@@ -77,10 +77,7 @@ int main() {
 
         YearGauge yg;
         double ylPer = yg.getPassedPercent();
-        cout <<  "\033[1m" << 100 - ylPer << "%" << "\033[0m";
-
-        double count = 0;
-
+        cout <<  "\033[1;31m" << ylPer << "%" << "\033[0m";
         cout << " " << "[";
         for(int i = 0; i <= 100; i++){
 
@@ -91,6 +88,7 @@ int main() {
         }
         cout << "\033[0m";
         cout << "]";
+        cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
 
         return 0;
 }
