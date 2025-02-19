@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/dev_at/projects/TimeGauge/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/YearGauge.dir/all
+all: CMakeFiles/TimeGauge.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/YearGauge.dir/clean
+clean: CMakeFiles/TimeGauge.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/YearGauge.dir
+# Target rules for target CMakeFiles/TimeGauge.dir
 
 # All Build rule for target.
-CMakeFiles/YearGauge.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/YearGauge.dir/build.make CMakeFiles/YearGauge.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/YearGauge.dir/build.make CMakeFiles/YearGauge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev_at/projects/TimeGauge/build/CMakeFiles --progress-num=1,2 "Built target YearGauge"
-.PHONY : CMakeFiles/YearGauge.dir/all
+CMakeFiles/TimeGauge.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeGauge.dir/build.make CMakeFiles/TimeGauge.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeGauge.dir/build.make CMakeFiles/TimeGauge.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev_at/projects/TimeGauge/build/CMakeFiles --progress-num=1,2 "Built target TimeGauge"
+.PHONY : CMakeFiles/TimeGauge.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/YearGauge.dir/rule: cmake_check_build_system
+CMakeFiles/TimeGauge.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dev_at/projects/TimeGauge/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/YearGauge.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TimeGauge.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dev_at/projects/TimeGauge/build/CMakeFiles 0
-.PHONY : CMakeFiles/YearGauge.dir/rule
+.PHONY : CMakeFiles/TimeGauge.dir/rule
 
 # Convenience name for target.
-YearGauge: CMakeFiles/YearGauge.dir/rule
-.PHONY : YearGauge
+TimeGauge: CMakeFiles/TimeGauge.dir/rule
+.PHONY : TimeGauge
 
 # clean rule for target.
-CMakeFiles/YearGauge.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/YearGauge.dir/build.make CMakeFiles/YearGauge.dir/clean
-.PHONY : CMakeFiles/YearGauge.dir/clean
+CMakeFiles/TimeGauge.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeGauge.dir/build.make CMakeFiles/TimeGauge.dir/clean
+.PHONY : CMakeFiles/TimeGauge.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

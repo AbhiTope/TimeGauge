@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/YearGauge.dir/src/main.cpp.o -o YearGauge 

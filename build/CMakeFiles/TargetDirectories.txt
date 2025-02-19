@@ -1,3 +1,3 @@
-/home/dev_at/projects/TimeGauge/build/CMakeFiles/YearGauge.dir
+/home/dev_at/projects/TimeGauge/build/CMakeFiles/TimeGauge.dir
 /home/dev_at/projects/TimeGauge/build/CMakeFiles/edit_cache.dir
 /home/dev_at/projects/TimeGauge/build/CMakeFiles/rebuild_cache.dir

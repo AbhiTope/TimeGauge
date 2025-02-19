@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=YearGauge
+CMAKE_PROJECT_NAME:STATIC=TimeGauge
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -225,13 +225,13 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-YearGauge_BINARY_DIR:STATIC=/home/dev_at/projects/TimeGauge/build
+TimeGauge_BINARY_DIR:STATIC=/home/dev_at/projects/TimeGauge/build
 
 //Value Computed by CMake
-YearGauge_IS_TOP_LEVEL:STATIC=ON
+TimeGauge_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-YearGauge_SOURCE_DIR:STATIC=/home/dev_at/projects/TimeGauge
+TimeGauge_SOURCE_DIR:STATIC=/home/dev_at/projects/TimeGauge
 
 
 ########################

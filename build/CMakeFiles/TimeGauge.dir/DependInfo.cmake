@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dev_at/projects/TimeGauge/src/main.cpp" "CMakeFiles/YearGauge.dir/src/main.cpp.o" "gcc" "CMakeFiles/YearGauge.dir/src/main.cpp.o.d"
+  "/home/dev_at/projects/TimeGauge/src/main.cpp" "CMakeFiles/TimeGauge.dir/src/main.cpp.o" "gcc" "CMakeFiles/TimeGauge.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

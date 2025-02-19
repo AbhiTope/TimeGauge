@@ -89,6 +89,7 @@ int main() {
         cout << "\033[0m";
         cout << "]";
         cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
+	cout << endl;
 
         return 0;
 }
