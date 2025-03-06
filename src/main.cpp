@@ -5,73 +5,38 @@
 
 using namespace std;
 
-class YearGauge{
-        private:
-                string dateYearStart, dateCurrent;
-                double diff, ylPer, noOfSecondsInYear, days;
+double getYL(){
+	time_t now = time(0);
+	time_t currentTime, yearStartTime;
 
-                time_t getSystemDate() {
-                        time_t result = time(0);
-                        tm* ltm = localtime(&result);
-			ltm->tm_year += 1900;
-			result = mktime(ltm);
-			return result;
-                }
+	tm* ltm = localtime(&now);
+	ltm->tm_year += 1900;
 
-                time_t yearStartDate(){
-                        time_t result = time(0);
-                        tm* ltm = localtime(&result);
-			ltm->tm_year += 1900;
-			ltm->tm_sec = 0;
-			ltm->tm_min = 0;
-			ltm->tm_hour = 0;
-			ltm->tm_mday = 1;
-			ltm->tm_mon = 0;
-			ltm->tm_wday = 0;
-			ltm->tm_yday = 0;
-			result = mktime(ltm);
-                        return result;
-                }
+	currentTime = mktime(ltm);
 
-                double getSecondsInCurrentYear(){
-                        time_t now = time(0);
-                        tm* ltm = localtime(&now);
-                        int year = ltm->tm_year + 1900;
-                        if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-                                return 31622400;
-                        else
-                                return 31536000;
-                }
-        public:
-                YearGauge(){
-                        dateYearStart = yearStartDate();
-                        dateCurrent = getSystemDate();
+	ltm->tm_sec = 0;
+	ltm->tm_min = 0;
+	ltm->tm_hour = 0;
+	ltm->tm_mday = 1;
+	ltm->tm_mon = 0;
+	ltm->tm_wday = 0;
+	ltm->tm_yday = 0;
 
-                        noOfSecondsInYear = getSecondsInCurrentYear();
+	yearStartTime = mktime(ltm);
 
-                        time_t ysd = yearStartDate();
-                        time_t cd = getSystemDate();
+	int year = ltm->tm_year;
+	int noOfSecondsInYear = 31536000;
+	if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+		noOfSecondsInYear = 31622400;
 
-                        diff = difftime(cd, ysd);
-                        ylPer = (diff/noOfSecondsInYear) * 100;
-                }
+	double diff = difftime(currentTime, yearStartTime);
+	return (diff/noOfSecondsInYear) * 100;
 
-                double getPassedPercent(){
-                        return ylPer;
-                }
-
-                double getPassedDays(){
-                        days = diff / (60 * 60 * 24);
-                        return days;
-                }
-
-};
-
+}
 
 int main() {
 
-        YearGauge yg;
-        double ylPer = yg.getPassedPercent();
+	double ylPer = getYL();
         cout <<  "\033[1;31m" << ylPer << "%" << "\033[0m";
         cout << " " << "[";
         for(int i = 0; i <= 100; i++){
@@ -85,6 +50,8 @@ int main() {
         cout << "]";
         cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
 	cout << endl;
+
+
 
         return 0;
 }
