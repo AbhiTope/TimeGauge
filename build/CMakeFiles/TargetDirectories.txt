@@ -1,3 +1,0 @@
-/home/admin/small_proj/YearGauge/build/CMakeFiles/YearGauge.dir
-/home/admin/small_proj/YearGauge/build/CMakeFiles/edit_cache.dir
-/home/admin/small_proj/YearGauge/build/CMakeFiles/rebuild_cache.dir
