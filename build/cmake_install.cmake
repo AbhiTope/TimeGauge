@@ -1,4 +1,4 @@
-# Install script for directory: /home/admin/small_proj/year_laps_in_percent
+# Install script for directory: /home/admin/small_proj/YearGauge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/admin/small_proj/year_laps_in_percent/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/admin/small_proj/YearGauge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

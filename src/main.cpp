@@ -10,24 +10,27 @@ class YearGauge{
                 string dateYearStart, dateCurrent;
                 double diff, ylPer, noOfSecondsInYear, days;
 
-                string getSystemDate() {
-                        time_t now = time(0);
-                        tm* ltm = localtime(&now);
-                        stringstream ss;
-                        ss << setw(4) << setfill('0') << ltm->tm_year + 1900 << "-";
-                        ss << setw(2) << setfill('0') << ltm->tm_mon + 1 << "-";
-                        ss << setw(2) << setfill('0') << ltm->tm_mday;
-                        return ss.str();
+                time_t getSystemDate() {
+                        time_t result = time(0);
+                        tm* ltm = localtime(&result);
+			ltm->tm_year += 1900;
+			result = mktime(ltm);
+			return result;
                 }
 
-                string yearStartDate(){
-                        time_t now = time(0);
-                        tm* ltm = localtime(&now);
-                        stringstream ss;
-                        ss << setw(4) << setfill('0') << ltm->tm_year + 1900 << "-";
-                        ss << setw(2) << setfill('0') << 1 << "-";
-                        ss << setw(2) << setfill('0') << 1;
-                        return ss.str();
+                time_t yearStartDate(){
+                        time_t result = time(0);
+                        tm* ltm = localtime(&result);
+			ltm->tm_year += 1900;
+			ltm->tm_sec = 0;
+			ltm->tm_min = 0;
+			ltm->tm_hour = 0;
+			ltm->tm_mday = 1;
+			ltm->tm_mon = 0;
+			ltm->tm_wday = 0;
+			ltm->tm_yday = 0;
+			result = mktime(ltm);
+                        return result;
                 }
 
                 double getSecondsInCurrentYear(){
@@ -46,18 +49,10 @@ class YearGauge{
 
                         noOfSecondsInYear = getSecondsInCurrentYear();
 
-                        struct tm tm1 = {};
-                        istringstream ss1(dateYearStart);
-                        ss1 >> get_time(&tm1, "%Y-%m-%d");
+                        time_t ysd = yearStartDate();
+                        time_t cd = getSystemDate();
 
-                        struct tm tm2 = {};
-                        istringstream ss2(dateCurrent);
-                        ss2 >> get_time(&tm2, "%Y-%m-%d");
-
-                        time_t t1 = mktime(&tm1);
-                        time_t t2 = mktime(&tm2);
-
-                        diff = difftime(t2, t1);
+                        diff = difftime(cd, ysd);
                         ylPer = (diff/noOfSecondsInYear) * 100;
                 }
 

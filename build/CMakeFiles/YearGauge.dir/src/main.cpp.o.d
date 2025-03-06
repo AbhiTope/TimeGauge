@@ -1,5 +1,5 @@
 CMakeFiles/YearGauge.dir/src/main.cpp.o: \
- /home/admin/small_proj/year_laps_in_percent/src/main.cpp \
+ /home/admin/small_proj/YearGauge/src/main.cpp \
  /usr/lib/gcc/x86_64-pc-msys/13.3.0/include/c++/iostream \
  /usr/lib/gcc/x86_64-pc-msys/13.3.0/include/c++/bits/requires_hosted.h \
  /usr/lib/gcc/x86_64-pc-msys/13.3.0/include/c++/x86_64-pc-msys/bits/c++config.h \
