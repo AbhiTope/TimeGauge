@@ -38,17 +38,21 @@ int main() {
 
 	double ylPer = getYL();
         cout <<  "\033[1;31m" << ylPer << "%" << "\033[0m";
-        cout << " " << "[";
+	for(int i = 0; i < 85; i++)
+		cout << " ";
+        cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
+	cout << endl;
+        //cout << " " << "[";
         for(int i = 0; i <= 100; i++){
 
                 if( i < ylPer)
-                        cout << "\033[31m#";
+                        cout << "\033[41;31m ";
                 else
-                        cout << "\033[32m.";
+                        cout << "\033[42;32m ";
         }
         cout << "\033[0m";
-        cout << "]";
-        cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
+        //cout << "]";
+        //cout <<  "\033[1;32m" << 100 - ylPer << "%" << "\033[0m";
 	cout << endl;
 
 
