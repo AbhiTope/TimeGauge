@@ -46,9 +46,9 @@ int main() {
         for(int i = 0; i <= 100; i++){
 
                 if( i < ylPer)
-                        cout << "\033[41;31m ";
+                        cout << "\033[101;31m ";
                 else
-                        cout << "\033[42;32m ";
+                        cout << "\033[102;32m ";
         }
         cout << "\033[0m";
         //cout << "]";
