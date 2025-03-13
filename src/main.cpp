@@ -34,6 +34,22 @@ double getYL(){
 
 }
 
+int days_in_month(int month){
+
+	if(month == 2){
+		time_t now = time(0); 
+		tm *ltm = localtime(&now);
+		int year = ltm->tm_year + 1900;
+		if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+			return 29;
+		return 28;
+	}
+	else if((month % 2 == 0 && month < 7) || ( month % 2 != 0 && month > 7))
+		return 30;
+
+	return 31;
+}
+
 int main() {
 
 	double ylPer = getYL();
